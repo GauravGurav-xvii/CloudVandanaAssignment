@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Customer Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-2 display-4 text-center">Customer Survey Form!!</h1>
+        <form id="surveyForm" onsubmit="return validateForm()" class="mt-4">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" class="form-control" required>
+                    <option value="India">India</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="USA">USA</option>
+                    <option value="Germany">Germany</option>
+                    <option value="England">England</option>
+                    <option value="Italy">Italy</option>
+                    <option value="France">France</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="male" name="gender" value="Male" class="form-check-input">
+                    <label for="male" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="female" name="gender" value="Female" class="form-check-input">
+                    <label for="female" class="form-check-label">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+
+            <div class="popup" id="resultPopup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Survey Results</h2>
+                <p id="popupContent"></p>
+            </div>
+        
+            <div class="overlay" id="overlay" onclick="closePopup()"></div>
+        
+        </form>
+    </div>
+
+    <!-- Bootstrap Query -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="form.js"></script>
+
+</body>
+</html>
